@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRONG Pilates Castle Hill - Sales Report November - January 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Playfair+Display:wght@700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body { -webkit-text-size-adjust: 100%; text-size-adjust: 100%;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            color: #000000;
+            background: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        .header {
+            background: #000000;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header .line1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 80px;
+            color: #87CEEB;
+            letter-spacing: 8px;
+            line-height: 1;
+        }
+
+        .header .line2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 100px;
+            color: #87CEEB;
+            letter-spacing: 12px;
+            line-height: 1;
+            margin-top: -10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #666666;
+            letter-spacing: 3px;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .white {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .dark {
+            background: #000000;
+            color: #ffffff;
+            border-bottom: none;
+        }
+
+        .featured {
+            background: #87CEEB;
+            color: #000000;
+            border-bottom: none;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Table of Contents */
+        .toc-section {
+            background: #ffffff;
+            padding: 60px 40px;
+        }
+
+        .toc-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .toc-section h2 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .toc-link {
+            display: block;
+            padding: 15px 25px;
+            border: 2px solid #000000;
+            border-radius: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #000000;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .toc-link:hover {
+            background: #87CEEB;
+            border-color: #87CEEB;
+            color: #000000;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: "Montserrat", sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .section-title.serif {
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        /* Metrics */
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .metric-card {
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            background: #f5f5f5;
+        }
+
+        .dark .metric-card {
+            background: #1a1a1a;
+            border-color: #333333;
+        }
+
+        .featured .metric-card {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .metric-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666666;
+            margin-bottom: 8px;
+        }
+
+        .dark .metric-label {
+            color: #87CEEB;
+        }
+
+        .featured .metric-label {
+            color: #000000;
+        }
+
+        .metric-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .dark .metric-value {
+            color: #ffffff;
+        }
+
+        .featured .metric-value {
+            color: #000000;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+
+        table th {
+            background: #000000;
+            color: #ffffff;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 12px;
+        }
+
+        .dark table th {
+            background: #87CEEB;
+            color: #000000;
+        }
+
+        .featured table th {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .dark table td {
+            background: #000000;
+            color: #ffffff;
+            border-bottom: 1px solid #333333;
+        }
+
+        .featured table td {
+            background: #87CEEB;
+            color: #000000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        table tr.total td {
+            background: #f5f5f5;
+            font-weight: 700;
+            border-top: 2px solid #000000;
+        }
+
+        .dark table tr.total td {
+            background: #1a1a1a;
+            border-top: 2px solid #87CEEB;
+        }
+
+        .featured table tr.total td {
+            background: rgba(0, 0, 0, 0.1);
+            border-top: 2px solid #000000;
+        }
+
+        /* Charts */
+        .chart-container {
+            margin-bottom: 40px;
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+
+        .chart-container canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        /* Insight Text */
+        .insight-text {
+            margin-top: 40px;
+        }
+
+        .insight-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .dark .insight-text p {
+            color: #ffffff;
+        }
+
+        /* Key Takeaways */
+        .key-takeaways {
+            background: #E6F7FF;
+            border-left: 4px solid #87CEEB;
+            padding: 25px;
+            margin-top: 30px;
+            border-radius: 4px;
+        }
+
+        .key-takeaways h4 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            color: #000000;
+        }
+
+        .key-takeaways ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .key-takeaways li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #000000;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .key-takeaways li:before {
+            content: "●";
+            position: absolute;
+            left: 0;
+            color: #87CEEB;
+            font-weight: bold;
+        }
+
+        .dark .key-takeaways {
+            background: #1a2a3a;
+        }
+
+        .dark .key-takeaways h4 {
+            color: #87CEEB;
+        }
+
+        .dark .key-takeaways li {
+            color: #ffffff;
+        }
+
+        /* Executive Summary */
+        .exec-summary-card {
+            background: #f5f5f5;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 35px;
+            margin-bottom: 40px;
+        }
+
+        .exec-summary-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #87CEEB;
+            margin-bottom: 10px;
+            margin-top: 25px;
+        }
+
+        .exec-summary-card h3:first-child {
+            margin-top: 0;
+        }
+
+        .exec-summary-card p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #000000;
+            margin: 0;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .exec-section {
+            margin-bottom: 35px;
+        }
+
+        .exec-section-title {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #000000;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #87CEEB;
+        }
+
+        .exec-summary ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .exec-summary li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.7;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .exec-summary li:before {
+            content: "●";
+            position: absolute;
+            left: 0;
+            color: #87CEEB;
+            font-weight: bold;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 50px;
+            height: 50px;
+            background: #000000;
+            color: #ffffff;
+            border: 2px solid #87CEEB;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #87CEEB;
+            color: #000000;
+            transform: translateY(-5px);
+        }
+
+        /* Mobile Responsive */
+        @media screen and (max-width: 768px) {
+            .header .line1 {
+                font-size: 50px;
+                letter-spacing: 4px;
+            }
+
+            .header .line2 {
+                font-size: 65px;
+                letter-spacing: 6px;
+            }
+
+            .header p {
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-title.serif {
+                font-size: 32px;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .chart-container {
+                height: 300px;
+                width: 100%;
+            }
+
+            .chart-container canvas {
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            table th,
+            table td {
+                padding: 8px 10px;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+    
+/* MOBILE RESPONSIVE ADDITIONS */
+@media screen and (max-width: 768px) {
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .metrics { grid-template-columns: 1fr !important; }
+  .chart-container { height: 250px; }
+  .chart-container canvas { max-height: 250px; }
+  section { padding: 40px 16px; }
+  .toc-grid { grid-template-columns: 1fr; }
+  .header .line1 { font-size: 36px; letter-spacing: 3px; }
+  .header .line2 { font-size: 48px; letter-spacing: 4px; }
+  .section-title { font-size: 24px; }
+}
+
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="line1">STRONG PILATES</div>
+            <div class="line2">CASTLE HILL</div>
+            <p>Sales Report · November 2025 - January 2026</p>
+        </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <section class="toc-section">
+        <div class="toc-content">
+            <h2>Table of Contents</h2>
+            <div class="toc-grid">
+                <a href="#executive-summary" class="toc-link">Executive Summary</a>
+                <a href="#client-activity" class="toc-link">Client Activity</a>
+                <a href="#studio-financials" class="toc-link">Studio Financials</a>
+                <a href="#session-attendance" class="toc-link">Session Attendance</a>
+                <a href="#sales-performance" class="toc-link">Sales & Performance</a>
+                <a href="#summary-path-forward" class="toc-link">Summary & Path Forward</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section id="executive-summary" class="white">
+        <div class="content-wrapper">
+            <h2 class="section-title">EXECUTIVE SUMMARY</h2>
+            <div class="insight-text exec-summary">
+                <div class="exec-summary-card">
+                    <h3>Membership</h3>
+                    <p>202 total members with 180 active and 22 suspended as of January 2026. Active rate reached 89.1%, improving from 75.6% in December following the holiday season recovery. Net membership decline of 7 members occurred (20 sold vs 27 cancelled), though this represented improvement from December's net loss of 24 members.</p>
+                    
+                    <h3>Revenue</h3>
+                    <p>Quarterly gross revenue totalled $189,210 across November-January. Revenue declined 19.9% from $70,216 in November to $56,243 in December before recovering to $62,751 in January. Membership revenue contributed 77.8% of quarterly income ($147,180), with December impacted by reduced package sales and lower membership count.</p>
+                    
+                    <h3>Utilisation</h3>
+                    <p>Booking utilisation averaged 73.55% in January, within the 70-85% optimal target range, recovering from December's 62.41%. Attendance utilisation reached 64.66%, below the 70-75% healthy threshold but improving from December's 53.59%. The 10-percentage-point gap between booking and attendance rates indicates members are reserving spots but not consistently showing up.</p>
+                    
+                    <h3>Sales vs Cancellations</h3>
+                    <p>January delivered 20 membership sales against 27 cancellations, resulting in net negative growth of 7 members. Intro offers sold surged 277% from 35 in December to 132 in January driven by the STRONG Starter Pass promotion. First visits jumped from 52 to 132, mirroring the intro offer surge and indicating successful lead generation.</p>
+                </div>
+                
+                <div class="exec-section">
+                    <h3 class="exec-section-title">Key Issues</h3>
+                    <ul>
+                        <li><strong>Attrition above target:</strong> Member attrition remained elevated at 12.88% (Dec) and 12.44% (Jan), well above the sub-7% target, with December cancellations spiking to 30 members and creating net membership losses across all three months.</li>
+                        <li><strong>Attendance utilisation below threshold:</strong> Attendance utilisation averaged 61.17% across the quarter, remaining below the healthy 70-75% threshold despite booking utilisation averaging 70.40%, indicating a 10-percentage-point gap where members book sessions but don't consistently attend.</li>
+                        <li><strong>Membership decline trajectory:</strong> Total membership declined 14.4% from 236 to 202 members over the quarter, with cancellations exceeding sales in all three months, requiring both improved retention and increased sales volume.</li>
+                        <li><strong>Seasonal volatility impact:</strong> December showed steep declines across key metrics—membership dropped to 217, attendance utilisation fell to 53.59%, and suspended members spiked 96% to 53—demonstrating vulnerability to seasonal patterns.</li>
+                        <li><strong>Recurring revenue base erosion:</strong> Declining membership count directly impacts the recurring revenue foundation, with monthly membership revenue declining from $53,713 in November to $46,634 in January despite stable per-member revenue.</li>
+                    </ul>
+                </div>
+                
+                <div class="exec-section">
+                    <h3 class="exec-section-title">Active Interventions Being Deployed</h3>
+                    <ul>
+                        <li><strong>Cancellation analysis initiative:</strong> Active effort to understand high cancellation numbers through member feedback and data analysis to identify root causes and inform targeted retention strategies addressing the elevated attrition rates.</li>
+                        <li><strong>STRONG Starter Pass promotion:</strong> Successfully drove January intro offer sales to 132 units (277% increase), creating substantial lead generation and pipeline opportunity requiring systematic conversion processes.</li>
+                        <li><strong>New intro offer structure:</strong> Mid-February launch of 5-days-for-$50 offer, which testing has shown increases conversion rates, providing improved entry point for trial members.</li>
+                        <li><strong>STRONG Challenge initiative:</strong> Launching to drive class attendance, member engagement, and retention through gamified participation and accountability mechanisms.</li>
+                        <li><strong>Recovr retention software:</strong> Supporting systematic retention efforts and pipeline management to address elevated attrition rates through structured follow-up and engagement protocols.</li>
+                        <li><strong>FOH restructure implementation:</strong> New structure creating seamless customer journey with ongoing refinement and training to optimise sales pipeline efficiency and conversion processes.</li>
+                        <li><strong>Operational process training:</strong> Ongoing sales training and collaboration with FOH to ensure routines are built around daily scheduled tasks, proficiency with software, and consistent execution of sales pipelines and retention protocols.</li>
+                    </ul>
+                </div>
+                
+                <div class="exec-section">
+                    <h3 class="exec-section-title">Expected Outcomes</h3>
+                    <ul>
+                        <li>Reduce attrition from current 12.44% toward sub-7% target through systematic execution of Recovr retention protocols, STRONG Challenge engagement initiatives, and insights from cancellation analysis.</li>
+                        <li>Convert January's 132 intro offer sales into sustained membership growth through improved conversion processes, new intro offer structure, and consistent FOH pipeline execution.</li>
+                        <li>Improve attendance utilisation from 61.17% toward 70-75% healthy threshold by closing the booking-to-attendance gap through better member engagement and accountability systems.</li>
+                        <li>Stabilise and reverse membership decline trajectory by balancing retention improvements with increased sales conversion, targeting net positive membership growth.</li>
+                        <li>Optimise booking utilisation within the 70-85% target range whilst improving show-up consistency to maximise revenue per available session capacity.</li>
+                        <li>Build operational consistency through systematic process execution across sales, retention, and engagement systems, establishing foundation for sustainable long-term growth.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Activity -->
+    <section id="client-activity" class="white">
+        <div class="content-wrapper">
+            <h2 class="section-title serif">Client Activity.</h2>
+            
+            <!-- Metrics -->
+            <div class="metrics">
+                <div class="metric-card">
+                    <div class="metric-label">Total Members</div>
+                    <div class="metric-value">202</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Active Members</div>
+                    <div class="metric-value">180</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Suspended Members</div>
+                    <div class="metric-value">22</div>
+                </div>
+            </div>
+
+            <!-- Membership Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Total Members</th>
+                        <th>Active Members</th>
+                        <th>Suspended Members</th>
+                        <th>Active Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nov 2025</td>
+                        <td>236</td>
+                        <td>209</td>
+                        <td>27</td>
+                        <td>88.6%</td>
+                    </tr>
+                    <tr>
+                        <td>Dec 2025</td>
+                        <td>217</td>
+                        <td>164</td>
+                        <td>53</td>
+                        <td>75.6%</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 2026</td>
+                        <td>202</td>
+                        <td>180</td>
+                        <td>22</td>
+                        <td>89.1%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Chart -->
+            <div class="chart-container">
+                <canvas id="membershipTrendChart"></canvas>
+            </div>
+
+            <!-- Insight Text -->
+            <div class="insight-text">
+                <p>Total membership declined 14.4% from 236 members in November to 202 members in January, with December showing the steepest drop to 217 members. Active membership decreased from 209 in November to 164 in December before recovering partially to 180 in January. The active member rate dropped from 88.6% in November to 75.6% in December, then improved to 89.1% in January, reflecting significant volatility in member engagement across the quarter.</p>
+
+                <p>Suspended memberships surged from 27 in November to 53 in December—a 96% increase—before declining to 22 in January. This December spike aligns with typical holiday season patterns when members pause commitments due to travel and seasonal schedules. The recovery in January (active rate improving to 89.1% and suspensions dropping) indicates members returned to regular attendance post-holidays, though total membership continued declining due to cancellations outpacing new sales. The studio faces retention challenges with net membership losses across all three months, requiring focused intervention to stabilise and rebuild the member base.</p>
+
+                <div class="key-takeaways">
+                    <h4>Key Takeaways</h4>
+                    <ul>
+                        <li>Total membership declined 14.4% from 236 to 202 members over the quarter, with December showing the steepest drop</li>
+                        <li>Active member rate fluctuated significantly: 88.6% (Nov) → 75.6% (Dec) → 89.1% (Jan), demonstrating volatile engagement patterns</li>
+                        <li>Suspended memberships spiked 96% in December to 53 members due to holiday season impacts, then recovered to 22 in January</li>
+                        <li>Net membership losses occurred as cancellations exceeded sales in all three months, requiring both improved retention and increased sales volume</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Financials -->
+    <section id="studio-financials" class="dark">
+        <div class="content-wrapper">
+            <h2 class="section-title serif">Studio Financials.</h2>
+
+            <!-- Financial Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Gross Revenue</th>
+                        <th>Memberships</th>
+                        <th>Packages</th>
+                        <th>Intro Offers</th>
+                        <th>Fees</th>
+                        <th>Other</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nov 2025</td>
+                        <td>$70,216</td>
+                        <td>$53,713</td>
+                        <td>$12,506</td>
+                        <td>$2,723</td>
+                        <td>$1,274</td>
+                        <td>$0</td>
+                    </tr>
+                    <tr>
+                        <td>Dec 2025</td>
+                        <td>$56,243</td>
+                        <td>$46,833</td>
+                        <td>$5,061</td>
+                        <td>$1,888</td>
+                        <td>$1,994</td>
+                        <td>$466</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 2026</td>
+                        <td>$62,751</td>
+                        <td>$46,634</td>
+                        <td>$9,855</td>
+                        <td>$7,096</td>
+                        <td>$3,060</td>
+                        <td>$106</td>
+                    </tr>
+                    <tr class="total">
+                        <td>Total</td>
+                        <td>$189,210</td>
+                        <td>$147,180</td>
+                        <td>$27,422</td>
+                        <td>$11,707</td>
+                        <td>$6,328</td>
+                        <td>$572</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Chart -->
+            <div class="chart-container">
+                <canvas id="revenueBreakdownChart"></canvas>
+            </div>
+
+            <!-- Insight Text -->
+            <div class="insight-text">
+                <p>Quarterly revenue totalled $189,210 across the three-month period, with membership revenue representing 77.8% of total income ($147,180). Revenue declined 19.9% from $70,216 in November to $56,243 in December before recovering partially to $62,751 in January. The December decline reflected reduced package sales (dropping from $12,506 to $5,061) and lower membership revenue as total member count decreased, whilst January's recovery was driven by increased intro offer revenue ($7,096) and package sales rebounding to $9,855.</p>
+
+                <p>Monthly membership revenue remained relatively stable ($53,713 → $46,833 → $46,634) despite declining member counts, indicating consistent average revenue per member. Late cancel and no-show fees contributed $5,334 across the quarter, representing 2.8% of total revenue. (Whilst late cancel fees contribute to revenue, the goal is not to increase this stream—reduced fees indicate better member attendance behaviour, which drives long-term retention and stickiness.) Gift card revenue of $426 appeared only in December, whilst other revenue streams remained minimal throughout the quarter.</p>
+
+                <div class="key-takeaways">
+                    <h4>Key Takeaways</h4>
+                    <ul>
+                        <li>Quarterly revenue of $189,210 was driven primarily by membership revenue at 77.8% of total income</li>
+                        <li>Revenue fluctuated from $70,216 (Nov) to $56,243 (Dec) to $62,751 (Jan), with December impacted by reduced package sales and lower membership count</li>
+                        <li>Package revenue showed high volatility ranging from $5,061 to $12,506 monthly, whilst intro offer revenue increased significantly in January to $7,096</li>
+                        <li>Monthly membership revenue remained relatively stable despite declining member counts, indicating consistent average revenue per member</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Session Attendance -->
+    <section id="session-attendance" class="featured">
+        <div class="content-wrapper">
+            <h2 class="section-title">SESSION ATTENDANCE</h2>
+
+            <!-- Session Attendance Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Sessions</th>
+                        <th>Booking Utilisation</th>
+                        <th>Attendance Utilisation</th>
+                        <th>Booking Capacity</th>
+                        <th>Sessions Booked</th>
+                        <th>Sessions Attended</th>
+                        <th>Avg Rev/Visit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nov 2025</td>
+                        <td>447</td>
+                        <td>75.25%</td>
+                        <td>65.25%</td>
+                        <td>3,911</td>
+                        <td>2,943</td>
+                        <td>2,552</td>
+                        <td>$23.86</td>
+                    </tr>
+                    <tr>
+                        <td>Dec 2025</td>
+                        <td>426</td>
+                        <td>62.41%</td>
+                        <td>53.59%</td>
+                        <td>3,743</td>
+                        <td>2,336</td>
+                        <td>2,006</td>
+                        <td>$24.08</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 2026</td>
+                        <td>439</td>
+                        <td>73.55%</td>
+                        <td>64.66%</td>
+                        <td>3,834</td>
+                        <td>2,820</td>
+                        <td>2,479</td>
+                        <td>$22.25</td>
+                    </tr>
+                    <tr class="total">
+                        <td>Total</td>
+                        <td>1,312</td>
+                        <td>70.40%</td>
+                        <td>61.17%</td>
+                        <td>11,488</td>
+                        <td>8,099</td>
+                        <td>7,037</td>
+                        <td>$23.40</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Chart -->
+            <div class="chart-container">
+                <canvas id="utilisationTrendChart"></canvas>
+            </div>
+
+            <!-- Insight Text -->
+            <div class="insight-text">
+                <p>Booking utilisation fluctuated across the quarter, declining from 75.25% in November to 62.41% in December before recovering to 73.55% in January. Attendance utilisation showed a similar pattern, dropping from 65.25% to 53.59% in December then rebounding to 64.66% in January. The December decline reflected holiday season impacts on both bookings and actual attendance, with sessions attended falling from 2,552 to 2,006—a 21.4% decrease. January's recovery demonstrated members returning to regular routines post-holidays, with booking utilisation approaching the optimal 70-85% target range.</p>
+
+                <p>Attendance utilisation remained below the healthy 70-75% threshold throughout the quarter, indicating members are booking sessions but not consistently attending. The gap between booking and attendance rates (approximately 10 percentage points) suggests opportunity to improve show-up rates through better engagement and accountability systems. Revenue per visit remained stable across the quarter, ranging from $22.25 to $24.08, indicating consistent pricing and package utilisation patterns. Current utilisation levels provide capacity for growth through improved attendance consistency and new member acquisition without requiring schedule expansion.</p>
+
+                <div class="key-takeaways">
+                    <h4>Key Takeaways</h4>
+                    <ul>
+                        <li>Booking utilisation averaged 70.40% across the quarter, within the optimal 70-85% target range, whilst attendance utilisation averaged 61.17%, below the healthy 70-75% threshold</li>
+                        <li>December showed sharp declines in both metrics due to holiday season impacts, with attendance utilisation dropping to 53.59%</li>
+                        <li>The 10-percentage-point gap between booking and attendance rates indicates members are reserving spots but not consistently showing up</li>
+                        <li>Revenue per visit remained stable between $22.25 and $24.08, demonstrating consistent pricing and package utilisation despite attendance volatility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sales & Performance -->
+    <section id="sales-performance" class="white">
+        <div class="content-wrapper">
+            <h2 class="section-title">SALES & PERFORMANCE METRICS</h2>
+
+            <!-- Sales Performance Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Memberships Sold</th>
+                        <th>Intro Offers Sold</th>
+                        <th>Packs Sold</th>
+                        <th>Cancelled Members</th>
+                        <th>Attrition Rate</th>
+                        <th>First Visits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nov 2025</td>
+                        <td>9</td>
+                        <td>50</td>
+                        <td>83</td>
+                        <td>21</td>
+                        <td>8.30%</td>
+                        <td>69</td>
+                    </tr>
+                    <tr>
+                        <td>Dec 2025</td>
+                        <td>6</td>
+                        <td>35</td>
+                        <td>55</td>
+                        <td>30</td>
+                        <td>12.88%</td>
+                        <td>52</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 2026</td>
+                        <td>20</td>
+                        <td>132</td>
+                        <td>70</td>
+                        <td>27</td>
+                        <td>12.44%</td>
+                        <td>132</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Chart 1: Sales vs Cancellations -->
+            <div class="chart-container">
+                <canvas id="salesVsCancellationsChart"></canvas>
+            </div>
+
+            <!-- Chart 2: Attrition Trend -->
+            <div class="chart-container">
+                <canvas id="attritionTrendChart"></canvas>
+            </div>
+
+            <!-- Chart 3: Sales Performance Trend -->
+            <div class="chart-container">
+                <canvas id="salesPerformanceChart"></canvas>
+            </div>
+
+            <!-- Insight Text -->
+            <div class="insight-text">
+                <p>Membership sales declined from 9 units in November to 6 in December before recovering to 20 in January, whilst cancellations increased from 21 to 30 in December then decreased to 27 in January. Member attrition spiked from 8.30% in November to 12.88% in December before settling at 12.44% in January, remaining well above the sub-7% target and indicating significant retention challenges. The December spike in both cancellations and attrition aligned with typical year-end patterns when members reassess commitments, though the elevated January rate suggests retention issues persisted beyond seasonal factors.</p>
+
+                <p>Intro offer sales showed high volatility, dropping from 50 in November to 35 in December before surging to 132 in January—a 277% increase driven by the STRONG Starter Pass promotion. First visits mirrored this pattern, declining from 69 to 52 before jumping to 132 in January, indicating the promotional offer successfully generated lead flow. Pack sales remained relatively stable, ranging from 55 to 83 units across the quarter. Late cancel and no-show fees totalled 3,077 incidents across the three months (As per fee insights above, fewer late cancel/no-shows indicate better member attendance behaviour). The January surge in intro offers represents pipeline opportunity, though conversion success will depend on systematic follow-up and retention processes to convert trial members into long-term commitments.</p>
+
+                <div class="key-takeaways">
+                    <h4>Key Takeaways</h4>
+                    <ul>
+                        <li>Attrition remained elevated at 12.88% (Dec) and 12.44% (Jan), well above the sub-7% target, with December cancellations spiking to 30 members</li>
+                        <li>Intro offer sales surged 277% in January to 132 units driven by the STRONG Starter Pass promotion, creating significant pipeline opportunity</li>
+                        <li>First visits jumped from 52 to 132 in January, mirroring the intro offer surge and indicating successful lead generation</li>
+                        <li>Membership sales remained low throughout the quarter (6-20 units), with net membership losses occurring in all three months as cancellations exceeded sales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary & Path Forward -->
+    <section id="summary-path-forward" class="dark">
+        <div class="content-wrapper">
+            <h2 class="section-title">SUMMARY & PATH FORWARD</h2>
+
+            <div class="insight-text">
+                <p>STRONG Pilates Castle Hill generated $189,210 in quarterly revenue with membership revenue representing 77.8% of total income, though total membership declined 14.4% from 236 to 202 members across the three-month period. The studio demonstrated operational resilience through the holiday season, with booking utilisation averaging 70.40% within the optimal target range, though attendance utilisation at 61.17% remained below the healthy 70-75% threshold. The January surge in intro offer sales to 132 units—driven by the STRONG Starter Pass promotion—created substantial pipeline opportunity, whilst elevated attrition rates above 12% in December and January highlighted retention as the primary operational challenge requiring immediate intervention.</p>
+
+                <p>The path forward centres on converting January's lead generation success into sustained membership growth whilst addressing the gap between booking and attendance rates. Systematic execution of retention protocols through Recovr software, combined with the upcoming STRONG Challenge initiative to drive engagement, should support efforts to reduce attrition toward the sub-7% target. The FOH restructure's ongoing refinement and the mid-February launch of the new 5-days-for-$50 intro offer provide operational foundation for improved conversion rates. Success depends on consistent process execution across sales pipelines, retention systems, and member engagement initiatives, with focus on transforming trial members into committed long-term clients whilst improving show-up rates among existing members.</p>
+
+                <div class="key-takeaways">
+                    <h4>Key Takeaways</h4>
+                    <ul>
+                        <li>Quarterly revenue of $189,210 was anchored by stable membership revenue (77.8% of total), though declining member count from 236 to 202 presents growth challenges</li>
+                        <li>January's intro offer surge to 132 units created significant pipeline opportunity requiring systematic conversion processes to realise membership growth</li>
+                        <li>Attrition above 12% and attendance utilisation below 70% indicate retention and engagement as primary operational priorities</li>
+                        <li>Upcoming initiatives (STRONG Challenge, new intro offer structure, Recovr retention systems) provide operational framework to address retention challenges and improve conversion rates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+    <script>
+        // Chart.js Configuration
+        try {
+            Chart.register(ChartDataLabels);
+        } catch (error) {
+            console.error("Error loading Chart.js or DataLabels:", error);
+        }
+
+        // Color Variables
+        const skyBlue = '#87CEEB';
+        const black = '#000000';
+        const charcoal = '#4A4A4A';
+        const mediumGray = '#7A7A7A';
+        const lightGray = '#B8B8B8';
+
+        // Chart 1: Membership Status Trend
+        const membershipCtx = document.getElementById('membershipTrendChart').getContext('2d');
+        new Chart(membershipCtx, {
+            type: 'line',
+            data: {
+                labels: ['Nov 2025', 'Dec 2025', 'Jan 2026'],
+                datasets: [{
+                    label: 'Total Members',
+                    data: [236, 217, 202],
+                    borderColor: black,
+                    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                    pointBackgroundColor: black,
+                    pointRadius: 6,
+                    tension: 0.4,
+                    fill: true,
+                    datalabels: {
+                        align: 'top',
+                        anchor: 'end',
+                        offset: 5
+                    }
+                }, {
+                    label: 'Active Members',
+                    data: [209, 164, 180],
+                    borderColor: skyBlue,
+                    backgroundColor: 'rgba(135, 206, 235, 0.1)',
+                    pointBackgroundColor: skyBlue,
+                    pointRadius: 6,
+                    tension: 0.4,
+                    fill: true,
+                    datalabels: {
+                        align: 'left',
+                        anchor: 'end',
+                        offset: 5
+                    }
+                }, {
+                    label: 'Suspended Members',
+                    data: [27, 53, 22],
+                    borderColor: charcoal,
+                    backgroundColor: 'rgba(74, 74, 74, 0.1)',
+                    pointBackgroundColor: charcoal,
+                    pointRadius: 6,
+                    tension: 0.4,
+                    fill: true,
+                    datalabels: {
+                        align: 'bottom',
+                        anchor: 'end',
+                        offset: 5
+                    }
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat',
+                                size: 12
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: black,
+                        font: {
+                            family: 'Montserrat',
+                            size: 11,
+                            weight: 'bold'
+                        },
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderRadius: 3,
+                        padding: 3
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat'
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Revenue Breakdown
+        const revenueCtx = document.getElementById('revenueBreakdownChart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Nov 2025', 'Dec 2025', 'Jan 2026'],
+                datasets: [{
+                    label: 'Memberships',
+                    data: [53.713, 46.833, 46.634],
+                    backgroundColor: skyBlue,
+                    datalabels: {
+                        align: 'center',
+                        anchor: 'center',
+                        formatter: (value) => '$' + value.toFixed(1) + 'k'
+                    }
+                }, {
+                    label: 'Packages',
+                    data: [12.506, 5.061, 9.855],
+                    backgroundColor: lightGray,
+                    datalabels: {
+                        align: 'center',
+                        anchor: 'center',
+                        formatter: (value) => '$' + value.toFixed(1) + 'k'
+                    }
+                }, {
+                    label: 'Intro Offers',
+                    data: [2.723, 1.888, 7.096],
+                    backgroundColor: mediumGray,
+                    datalabels: {
+                        align: 'center',
+                        anchor: 'center',
+                        formatter: (value) => '$' + value.toFixed(1) + 'k'
+                    }
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            color: '#ffffff',
+                            font: {
+                                family: 'Montserrat',
+                                size: 12
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: black,
+                        font: {
+                            family: 'Montserrat',
+                            size: 11,
+                            weight: 'bold'
+                        },
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderRadius: 3,
+                        padding: 3
+                    }
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#ffffff',
+                            font: {
+                                family: 'Montserrat'
+                            }
+                        }
+                    },
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.2)'
+                        },
+                        ticks: {
+                            color: '#ffffff',
+                            font: {
+                                family: 'Montserrat'
+                            },
+                            callback: function(value) {
+                                return '$' + value + 'k';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Utilisation Trend (2 lines: Booking and Attendance)
+        const utilisationCtx = document.getElementById('utilisationTrendChart').getContext('2d');
+        new Chart(utilisationCtx, {
+            type: 'line',
+            data: {
+                labels: ['Nov 2025', 'Dec 2025', 'Jan 2026'],
+                datasets: [{
+                    label: 'Booking Utilisation',
+                    data: [75.25, 62.41, 73.55],
+                    borderColor: black,
+                    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                    pointBackgroundColor: black,
+                    pointRadius: 6,
+                    tension: 0.4,
+                    fill: true,
+                    datalabels: {
+                        align: 'top',
+                        anchor: 'end',
+                        offset: 5,
+                        formatter: (value) => value.toFixed(2) + '%'
+                    }
+                }, {
+                    label: 'Attendance Utilisation',
+                    data: [65.25, 53.59, 64.66],
+                    borderColor: charcoal,
+                    backgroundColor: 'rgba(74, 74, 74, 0.1)',
+                    pointBackgroundColor: charcoal,
+                    pointRadius: 6,
+                    tension: 0.4,
+                    fill: true,
+                    datalabels: {
+                        align: 'bottom',
+                        anchor: 'end',
+                        offset: 5,
+                        formatter: (value) => value.toFixed(2) + '%'
+                    }
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat',
+                                size: 12
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: black,
+                        font: {
+                            family: 'Montserrat',
+                            size: 11,
+                            weight: 'bold'
+                        },
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderRadius: 3,
+                        padding: 3
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat'
+                            },
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 4: Sales vs Cancellations
+        const salesVsCancellationsCtx = document.getElementById('salesVsCancellationsChart').getContext('2d');
+        new Chart(salesVsCancellationsCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Nov 2025', 'Dec 2025', 'Jan 2026'],
+                datasets: [{
+                    label: 'Memberships Sold',
+                    data: [9, 6, 20],
+                    backgroundColor: skyBlue,
+                    datalabels: {
+                        align: 'center',
+                        anchor: 'center',
+                        color: black
+                    }
+                }, {
+                    label: 'Cancelled Members',
+                    data: [21, 30, 27],
+                    backgroundColor: charcoal,
+                    datalabels: {
+                        align: 'center',
+                        anchor: 'center',
+                        color: '#ffffff'
+                    }
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat',
+                                size: 12
+                            }
+                        }
+                    },
+                    datalabels: {
+                        font: {
+                            family: 'Montserrat',
+                            size: 11,
+                            weight: 'bold'
+                        },
+                        backgroundColor: 'rgba(255, 255, 255, 0)',
+                        borderRadius: 3,
+                        padding: 3
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat'
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 5: Attrition Trend
+        const attritionCtx = document.getElementById('attritionTrendChart').getContext('2d');
+        new Chart(attritionCtx, {
+            type: 'line',
+            data: {
+                labels: ['Nov 2025', 'Dec 2025', 'Jan 2026'],
+                datasets: [{
+                    label: 'Member Attrition Rate',
+                    data: [8.30, 12.88, 12.44],
+                    borderColor: charcoal,
+                    backgroundColor: 'rgba(74, 74, 74, 0.1)',
+                    pointBackgroundColor: charcoal,
+                    pointRadius: 6,
+                    tension: 0.4,
+                    fill: true,
+                    datalabels: {
+                        align: 'top',
+                        anchor: 'end',
+                        offset: 5,
+                        formatter: (value) => value.toFixed(2) + '%'
+                    }
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat',
+                                size: 12
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: black,
+                        font: {
+                            family: 'Montserrat',
+                            size: 11,
+                            weight: 'bold'
+                        },
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderRadius: 3,
+                        padding: 3
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 15,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat'
+                            },
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 6: Sales Performance Trend
+        const salesPerformanceCtx = document.getElementById('salesPerformanceChart').getContext('2d');
+        new Chart(salesPerformanceCtx, {
+            type: 'line',
+            data: {
+                labels: ['Nov 2025', 'Dec 2025', 'Jan 2026'],
+                datasets: [{
+                    label: 'Memberships Sold',
+                    data: [9, 6, 20],
+                    borderColor: skyBlue,
+                    backgroundColor: 'rgba(135, 206, 235, 0.1)',
+                    pointBackgroundColor: skyBlue,
+                    pointRadius: 6,
+                    tension: 0.4,
+                    fill: false,
+                    datalabels: {
+                        align: 'bottom',
+                        anchor: 'end',
+                        offset: 5
+                    }
+                }, {
+                    label: 'Intro Offers Sold',
+                    data: [50, 35, 132],
+                    borderColor: charcoal,
+                    backgroundColor: 'rgba(74, 74, 74, 0.1)',
+                    pointBackgroundColor: charcoal,
+                    pointRadius: 6,
+                    tension: 0.4,
+                    fill: false,
+                    datalabels: {
+                        align: 'top',
+                        anchor: 'end',
+                        offset: 5
+                    }
+                }, {
+                    label: 'Packs Sold',
+                    data: [83, 55, 70],
+                    borderColor: mediumGray,
+                    backgroundColor: 'rgba(122, 122, 122, 0.1)',
+                    pointBackgroundColor: mediumGray,
+                    pointRadius: 6,
+                    tension: 0.4,
+                    fill: false,
+                    datalabels: {
+                        align: 'right',
+                        anchor: 'end',
+                        offset: 5
+                    }
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat',
+                                size: 12
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: black,
+                        font: {
+                            family: 'Montserrat',
+                            size: 11,
+                            weight: 'bold'
+                        },
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderRadius: 3,
+                        padding: 3
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        ticks: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat'
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: black,
+                            font: {
+                                family: 'Montserrat'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById("backToTop");
+        window.addEventListener("scroll", function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add("visible");
+            } else {
+                backToTopButton.classList.remove("visible");
+            }
+        });
+        backToTopButton.addEventListener("click", function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>
